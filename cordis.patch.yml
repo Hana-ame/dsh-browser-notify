@@ -1,0 +1,4 @@
+# dsh-browser-notify bundle patch: 挂载浏览器 toast 通知插件。
+- insert:
+    - id: browser-notify
+      name: 'dsh-browser-notify'

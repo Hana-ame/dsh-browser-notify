@@ -1,0 +1,27 @@
+{
+  "name": "dsh-browser-notify",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH 完成回应 / agent 弹选择题时，由浏览器（Web Notification API）弹桌面通知，点击跳回 3080 页面。从你访问 DSH 的浏览器发，不依赖任何系统级通知后端。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-session"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}
